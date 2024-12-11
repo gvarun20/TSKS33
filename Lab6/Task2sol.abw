@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="52" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.0.5" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.date_last_changed">Wed Dec 11 13:46:53 2024
+</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.date">Wed Dec 11 10:46:42 2024
+</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="2" edit-time="521" last-saved="1733921213" uid="a4181fbe-b7a3-11ef-905d-c02eb7def665">
+<version id="1" started="1733910402" uid="d3d7b452-b7a4-11ef-905d-c02eb7def665" auto="0" top-xid="52"/>
+<version id="2" started="1733921213" uid="ffb41566-b7bd-11ef-950b-a4003c015de9" auto="0" top-xid="52"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Tinos; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="3">
+<p style="Normal" xid="4" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt">TASK 2:</c></p>
+<p style="Normal" xid="5"><c props="font-size:20pt"></c><c props="font-size:20pt"></c></p>
+<p style="Normal" xid="6" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt">The sampling is not quite uniform. The first node is chosen at random, then a random neighbor of</c></p>
+<p style="Normal" xid="7" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt">that node is chosen, so more popular nodes have a higher chance at being picked since they are</c></p>
+<p style="Normal" xid="8" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt">more likely to be someone's neighbor. 83% of the edges are positive and roughly 17% are negative.</c></p>
+<p style="Normal" xid="9" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt">The structural balance seems to hold for this network since almost all of the sampled triangles</c></p>
+<p style="Normal" xid="10" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt">are strongly balanced.</c></p>
+<p style="Normal" xid="45" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt"></c><c props="font-size:20pt"></c></p>
+<p style="Normal" xid="46" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt">Task 2</c></p>
+<p style="Normal" xid="47" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt"></c><c props="font-size:20pt"></c></p>
+<p style="Normal" xid="48" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt">The triangles are sampled by randomly selecting a node and then choosing two of its neighbors. This sampling method introduces bias because the probability of selecting a particular triangle is influenced by the degree distribution of nodes in the network. Nodes with high degree are more likely to be selected</c></p>
+<p style="Normal" xid="49" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt"></c><c props="font-size:20pt"></c></p>
+<p style="Normal" xid="50" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt">tot number edges = 711210 tot number pos edges = 589888/711210 = 83% to number neg edges = 118619/711210 = 17%</c></p>
+<p style="Normal" xid="51" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt"></c><c props="font-size:20pt"></c></p>
+<p style="Normal" xid="52" props="text-align:left; dom-dir:ltr"><c props="font-size:20pt">yes i would say so, only one triangle was unbalanced</c></p>
+<p style="Normal" xid="11"><c></c></p>
+</section>
+</abiword>
