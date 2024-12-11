@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="49" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.0.5" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.date_last_changed">Wed Dec 11 13:46:28 2024
+</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.date">Wed Dec 11 10:35:55 2024
+</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="2" edit-time="1381" last-saved="1733921188" uid="132b369e-b7a3-11ef-91e4-c845d17cd98a">
+<version id="1" started="1733909755" uid="51ff65f2-b7a3-11ef-91e4-c845d17cd98a" auto="0" top-xid="49"/>
+<version id="2" started="1733921188" uid="f05470b6-b7bd-11ef-8ead-e4cd9d01f909" auto="0" top-xid="49"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Tinos; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="21">
+<p style="Normal" xid="22" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">TASK 1:</c></p>
+<p style="Normal" xid="23"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="24" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">Network 1: This seems to be a poisson distribution since we can see that most nodes have</c></p>
+<p style="Normal" xid="25" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">the same degree. The bump in the degree distribution in a log-log graph shows that. </c></p>
+<p style="Normal" xid="26" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">Average degree seems to be 10 since that's the middle of the bump. There seems to be </c></p>
+<p style="Normal" xid="27" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">cutoffs at degree 3 and 21.</c></p>
+<p style="Normal" xid="28"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="29" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">Network 2: Also seems to be a poisson distribution, same as above. Also average degree of 10.</c></p>
+<p style="Normal" xid="30"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="31" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">Network 3: This is a scale-free network since the degree distribution is (sort of) a straight</c></p>
+<p style="Normal" xid="32" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">line in a log-log graph. This seems to break down at higher degrees. Line has a tilt of -2, </c></p>
+<p style="Normal" xid="33" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">this means it has a degree of 2.</c></p>
+<p style="Normal" xid="34"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="35" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">Network 4: This is a star graph. It seems there are only nodes</c></p>
+<p style="Normal" xid="36" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">of degree 1 and 500. Maybe its one node with 500 neighbors that are leafs, that would explain</c></p>
+<p style="Normal" xid="37" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">why the clustering coefficient is 0.</c></p>
+<p style="Normal" xid="38"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="39" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">Network 5: There is no degree distribution, this must be something else. Maybe a regular graph.</c></p>
+<p style="Normal" xid="40"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="41" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">Network 6: There is also no degree distribution, but the clustering coefficient is 1. This </c></p>
+<p style="Normal" xid="42" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">could be a complete graph of degree 49.</c></p>
+<p style="Normal" xid="43"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="44" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">Network 7: This seems to be a scale-free network and the tilt seems to be -1.33.</c></p>
+<p style="Normal" xid="45"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="46" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">Network 8: This looks like a poisson network due to the bump in the degree graph.</c></p>
+<p style="Normal" xid="1" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="20" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">Task1</c></p>
+<p style="Normal" xid="2" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="3" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">The degree distribution of a network tells us the probability that a randomly chosen node will have degree k. A scale free network will have a almost straight line since it is log. Scale-free networks are a type of network characterized by the presence of large hubs. A scale-free network is one with a power-law degree distribution.</c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="4" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="5" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">N1: nodes with high degrees have a tendency to get lower clustering coefficients indicating that they act as bridges between different neighborhoods. Average node degree around 10. Erdös-Renyi networks since they follow the poisson distributions.</c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="6" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="7" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">N2: Very similar to N2.</c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="8" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="9" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">N3: Most likely scale free network, few are highly connected follows the power law curve. Linear in loglog. exonent around 1</c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="10" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="11" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">N4: Star network, one node has 499 degree and the rest only have one.</c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="12" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="13" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">N5: All nodes have the same degrees 7. 500 nodes, very hard to tell what type of graph it is. Not scale free or ER</c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="14" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="15" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">N6: A complete graph, all nodes are connected to each other</c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="16" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="17" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">N7: Most likely scale free network, few are highly connected follows the power law curve. Linear in loglog. exponent less than 1</c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="18" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="19" props="text-align:left; dom-dir:ltr"><c props="font-size:18pt">N8: Degree distribution is similar to N2 but doesnt have as many different amount degrees. ER</c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="47"><c props="font-size:18pt"></c><c props="font-size:18pt"></c></p>
+<p style="Normal" xid="48"><c props="font-size:18pt"></c><c props="font-size:18pt"> </c></p>
+<p style="Normal" xid="49"><c></c></p>
+</section>
+</abiword>
