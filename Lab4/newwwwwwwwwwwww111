@@ -1,0 +1,129 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+TSKS33 Hands-on Session 4 - Load Data
+Refactored Code for Stability
+"""
+
+import snap
+from random import randint, random
+from gen_data import genmod10star, genLiveJournal
+
+def compute_exact_mean(graph, node_values):
+    """Compute the exact mean of node values."""
+    total = sum(node_values[node.GetId()] for node in graph.Nodes())
+    return total / graph.GetNodes()
+
+def estimate_random_connection(graph, node_values):
+    """Estimate mean using random connections from random nodes."""
+    connection_sum = 0
+    for node in graph.Nodes():
+        degree = node.GetDeg()
+        if degree > 0:
+            neighbor_sum = sum(node_values[neighbor_id] for neighbor_id in node.GetOutEdges())
+            connection_sum += neighbor_sum / degree
+    return connection_sum / graph.GetNodes()
+
+def estimate_random_walk(graph, node_values):
+    """Estimate mean using uniform random walk."""
+    walk_sum = sum(node_values[neighbor_id] for node in graph.Nodes() for neighbor_id in node.GetOutEdges())
+    return walk_sum / (2 * graph.GetEdges())
+
+def metropolis_hastings_step(graph, current_node):
+    """Perform a single step of the Metropolis-Hastings algorithm."""
+    current_degree = current_node.GetDeg()
+    random_neighbor_id = current_node.GetNbrNId(randint(0, current_degree - 1))
+    neighbor_node = graph.GetNI(random_neighbor_id)
+    neighbor_degree = neighbor_node.GetDeg()
+
+    acceptance_ratio = current_degree / neighbor_degree
+    if random() < acceptance_ratio:
+        return neighbor_node
+    return current_node
+
+def sample_using_mh_walk(graph, node_values, num_samples):
+    """Sample node values using Metropolis-Hastings random walk."""
+    rnd = snap.TRnd(randint(0, 100000000))
+    rnd.Randomize()
+    random_node_id = graph.GetRndNId(rnd)
+    iterator = graph.GetNI(random_node_id)
+
+    # Reach steady state
+    for _ in range(num_samples):
+        iterator = metropolis_hastings_step(graph, iterator)
+
+    # Begin sampling
+    sample_sum = 0
+    for _ in range(num_samples):
+        iterator = metropolis_hastings_step(graph, iterator)
+        sample_sum += node_values[iterator.GetId()]
+    return sample_sum / num_samples
+
+# Main Code Execution
+print("Generating graph...")
+# Uncomment one of the following lines depending on the dataset you want to use:
+# graph, node_values = genmod10star()
+graph, node_values = genLiveJournal()
+num_samples = 10000
+
+print("\n--- Task 1: Exact Values and Sampling Estimates ---")
+exact_mean = compute_exact_mean(graph, node_values)
+print(f"Exact mean (uniform sampling): {exact_mean:.3f}")
+
+random_connection_mean = estimate_random_connection(graph, node_values)
+print(f"Random connection sampling mean: {random_connection_mean:.3f}")
+
+random_walk_mean = estimate_random_walk(graph, node_values)
+print(f"Uniform random walk mean: {random_walk_mean:.3f}")
+
+print("\n--- Task 2: Uniform Sampling ---")
+for i in range(5):
+    rnd = snap.TRnd(i * 1000)
+    rnd.Randomize()
+    sample_sum = sum(node_values[graph.GetRndNId(rnd)] for _ in range(num_samples))
+    print(f"Iteration {i}: {sample_sum / num_samples:.3f}")
+
+print("\n--- Task 3: Random Connection from Random Node ---")
+for i in range(5):
+    rnd = snap.TRnd(randint(0, 100000000))
+    rnd.Randomize()
+    sample_sum = 0
+    for _ in range(num_samples):
+        random_node_id = graph.GetRndNId(rnd)
+        random_node = graph.GetNI(random_node_id)
+        degree = random_node.GetDeg()
+        if degree > 0:
+            random_neighbor_id = random_node.GetNbrNId(randint(0, degree - 1))
+            sample_sum += node_values[random_neighbor_id]
+    print(f"Iteration {i}: {sample_sum / num_samples:.3f}")
+
+print("\n--- Task 4: Uniform Random Walk ---")
+for i in range(5):
+    rnd = snap.TRnd(randint(0, 100000000))
+    rnd.Randomize()
+    random_node_id = graph.GetRndNId(rnd)
+    iterator = graph.GetNI(random_node_id)
+
+    # Reach steady state
+    for _ in range(num_samples):
+        degree = iterator.GetDeg()
+        if degree > 0:
+            random_neighbor_id = iterator.GetNbrNId(randint(0, degree - 1))
+            iterator = graph.GetNI(random_neighbor_id)
+
+    # Begin sampling
+    sample_sum = 0
+    for _ in range(num_samples):
+        degree = iterator.GetDeg()
+        if degree > 0:
+            random_neighbor_id = iterator.GetNbrNId(randint(0, degree - 1))
+            iterator = graph.GetNI(random_neighbor_id)
+        sample_sum += node_values[iterator.GetId()]
+    print(f"Iteration {i}: {sample_sum / num_samples:.3f}")
+
+print("\n--- Task 5: Metropolis-Hastings Random Walk ---")
+for i in range(5):
+    mh_mean = sample_using_mh_walk(graph, node_values, num_samples)
+    print(f"Iteration {i}: {mh_mean:.3f}")
+
+print("\nAll tasks completed successfully.")
